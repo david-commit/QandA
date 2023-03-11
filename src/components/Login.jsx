@@ -7,21 +7,23 @@ const Login = () => {
       <form id='login-form'>
         <h1>Login</h1>
         <div>
-
-        <input type='text' aria-label='email' placeholder='Email' />
+          <input type='text' aria-label='email' placeholder='Email' />
+          <i class='fa-solid fa-envelope'></i>
         </div>
         <div>
-
-        <input type='password' aria-label='password' placeholder='Password' />
+          <input type='password' aria-label='password' placeholder='Password' />
+          <i class='fa-solid fa-lock'></i>
         </div>
         <button type='submit'>Login</button>
+        <section>
         <p>
           Forgot password? <Link to='/reset-password'>Reset</Link>
         </p>
-        <hr width='100%' />
+        <hr width='80%' />
         <p>
           Dont have an account? <Link to='/register'>Register</Link>
         </p>
+        </section>
       </form>
     </div>
   );
