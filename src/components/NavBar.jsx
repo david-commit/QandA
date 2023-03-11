@@ -7,7 +7,7 @@ const NavBar = () => {
       <div className='logo'>QandA</div>
       <nav>
         <NavLink to='/'>Home</NavLink>
-        <NavLink to='/questions'>See questions</NavLink>
+        <NavLink to='/questions'>Questions</NavLink>
         <NavLink to='/login'>
           <button>Login</button>
         </NavLink>
@@ -15,6 +15,9 @@ const NavBar = () => {
           <button>Register</button>
         </NavLink>
       </nav>
+      <div className='nav-icons'>
+        <i class='fa-solid fa-bars'></i>
+      </div>
     </header>
   );
 };

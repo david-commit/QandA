@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --darkBlue: rgb(21, 26, 35);
+  --boxShadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Open Sans', sans-serif;
+}
+body {
+  background-color: var(--darkBlue);
+  color: white;
+}
+header {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+  margin: 2vh auto;
+  align-items: center;
+  box-shadow: var(--boxShadow);
+  padding: 0 1rem;
+  border-radius: 10px;
+}
+.logo {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+nav {
+  display: none;
+}
+.nav-icons {
+  font-size: 1.5rem;
+}
+
+/* ========== MEDIA QUERIES ========= */
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  nav {
+    display: flex;
+  }
+  .nav-icons {
+    display: none;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+/* ========== MEDIA QUERIES ========= */
