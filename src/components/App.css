@@ -4,7 +4,7 @@
   --darkBlue: #162938;
   --boxShadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-  --transition: all 0.5s ease-in-out;
+  --transition: all 0.2s ease-in-out;
 }
 * {
   padding: 0;
@@ -57,12 +57,13 @@ nav {
 #login-form {
   width: 50%;
   max-width: 400px;
-  min-width: 350px;
+  min-width: 300px;
   display: flex;
   flex-direction: column;
   border: 1px solid var(--darkBlue);
-  margin: 15vh auto 0;
-  height: 400px;
+  margin: 10vh auto 0;
+  height: auto;
+  padding-bottom: 6vh;
   border-radius: 1rem;
   backdrop-filter: blur(8px);
 }
@@ -136,6 +137,7 @@ hr {
   font-weight: 600;
 }
 /* ------ LOGIN ------- */
+
 
 /* ========== MEDIA QUERIES ========= */
 /* Small devices (landscape phones, 576px and up) */
