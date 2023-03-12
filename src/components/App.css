@@ -6,6 +6,12 @@
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   --transition: all 0.2s ease-in-out;
   --textShadow: 1px 1px 2px #000;
+  --blackTransparentBackground: rgba(
+    0,
+    0,
+    0,
+    0.15
+  ); /* Black background with opacity */
 }
 * {
   padding: 0;
@@ -19,8 +25,6 @@ body {
   background-color: var(--darkBlue);
   color: white;
   background-image: url('../assets/background.jpg');
-  
-  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
@@ -145,7 +149,9 @@ hr {
   width: 85%;
   margin: 0 auto;
   backdrop-filter: blur(4px);
-  background-color: rgba(0, 0, 0, 0.15); /* Black background with opacity */
+  background-color: var(
+    --blackTransparentBackground
+  ); /* Black background with opacity */
   text-shadow: var(--textShadow);
   border-radius: 10px;
   padding: 1rem 0.8rem;
@@ -163,8 +169,21 @@ hr {
 /* ------- QUESTIONS ------- */
 .questions-main-container {
   width: 85%;
-  margin: 0 auto;
+  margin: 3vh auto;
   text-shadow: var(--textShadow);
+  background-color: var(--boxShadow);
+}
+.questions-main-container h1 {
+  margin-bottom: 1rem;
+}
+.questions-main-container > section {
+  margin-bottom: 1rem;
+  background-color: rgba(0, 0, 0, 0.35);
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+.questions-main-container > section > h4 {
+  padding-bottom: 0.5rem;
 }
 /* ------- QUESTIONS ------- */
 
@@ -212,6 +231,9 @@ hr {
   .home-main-container {
     padding: 2rem;
     line-height: 1.6rem;
+  }
+  .questions-main-container > section > h4 {
+    font-size: 18px;
   }
 }
 

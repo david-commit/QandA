@@ -16,7 +16,10 @@ function App() {
   useEffect(() => {
     fetch(`${baseURL}/questions`)
       .then((response) => response.json())
-      .then((data) => setQuestions(data));
+      .then((data) => {
+        setQuestions(data);
+        console.log(data);
+      });
   }, []);
 
   return (
@@ -28,13 +31,7 @@ function App() {
           <Route path='/register' element={<Register />} />
           <Route
             path='/questions'
-            element={
-              <Questions
-                baseURL={baseURL}
-                questions={questions}
-                setQuestions={setQuestions}
-              />
-            }
+            element={<Questions questions={questions} />}
           />
           <Route path='/' element={<Home />} />
         </Routes>
