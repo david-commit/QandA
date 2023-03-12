@@ -1,19 +1,27 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-const NavBar = () => {
+const NavBar = ({ user, setUser }) => {
   return (
     <header>
       <div className='logo'>QandA</div>
       <nav>
         <NavLink to='/'>Home</NavLink>
         <NavLink to='/questions'>Questions</NavLink>
-        <NavLink to='/login'>
-          <button>Login</button>
-        </NavLink>
-        <NavLink to='/register'>
-          <button>Register</button>
-        </NavLink>
+        {!user ? (
+          <>
+            <NavLink to='/login'>
+              <button>Login</button>
+            </NavLink>
+            <NavLink to='/register'>
+              <button>Register</button>
+            </NavLink>
+          </>
+        ) : (
+          <NavLink to='/'>
+            <button>Logout</button>
+          </NavLink>
+        )}
       </nav>
       <div className='nav-icons'>
         <i class='fa-solid fa-bars'></i>
