@@ -6,6 +6,7 @@ import Login from './Login';
 import Register from './Register';
 import Home from './Home';
 import Questions from './Questions';
+import Question from './Question';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -34,6 +35,7 @@ function App() {
             element={<Questions questions={questions} />}
           />
           <Route path='/' element={<Home />} />
+          <Route path={`/questions/:q_id`} element={<Question />} />
         </Routes>
       </main>
     </div>
