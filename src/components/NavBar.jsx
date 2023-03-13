@@ -6,10 +6,10 @@ const NavBar = ({ user, setUser }) => {
     <header>
       <div className='logo'>QandA</div>
       <nav>
-        <NavLink to='/'>Home</NavLink>
         <NavLink to='/questions'>Questions</NavLink>
         {!user ? (
           <>
+            <NavLink to='/'>Home</NavLink>
             <NavLink to='/login'>
               <button>Login</button>
             </NavLink>
@@ -18,9 +18,13 @@ const NavBar = ({ user, setUser }) => {
             </NavLink>
           </>
         ) : (
-          <NavLink to='/'>
-            <button>Logout</button>
-          </NavLink>
+          <>
+            <NavLink to='/'>Your Questions</NavLink>
+            <NavLink to='/'>Ask Question</NavLink>
+            <NavLink to='/'>
+              <button>Logout</button>
+            </NavLink>
+          </>
         )}
       </nav>
       <div className='nav-icons'>

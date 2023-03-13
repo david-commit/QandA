@@ -9,7 +9,7 @@ import Questions from './Questions';
 import Question from './Question';
 
 function App() {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(true);
   const [questions, setQuestions] = useState([]);
   const baseURL = `http://localhost:8000`;
 
@@ -28,14 +28,20 @@ function App() {
       <NavBar user={user} setUser={setUser} />
       <main>
         <Routes>
-          <Route path='/login' element={<Login setUser={setUser} />} />
-          <Route path='/register' element={<Register />} />
+          <Route
+            path='/login'
+            element={<Login setUser={setUser} baseURL={baseURL} />}
+          />
+          <Route path='/register' element={<Register />} baseURL={baseURL} />
           <Route
             path='/questions'
             element={<Questions questions={questions} />}
           />
           <Route path='/' element={<Home />} />
-          <Route path={`/questions/:q_id`} element={<Question />} />
+          <Route
+            path={`/questions/:q_id`}
+            element={<Question baseURL={baseURL} />}
+          />
         </Routes>
       </main>
     </div>
